@@ -1,6 +1,13 @@
+@use "../../partials/_breakpoints.scss" as *;
+
 .headerbar {
   &__navimg {
     display: flex;
+  }
+  &__userpfp {
+    @include phonescreen {
+      width: 2rem;
+    }
   }
   &__form {
     background: white url(../../assets/icons/search.svg) left no-repeat;

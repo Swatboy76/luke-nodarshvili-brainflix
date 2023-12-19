@@ -16,7 +16,10 @@ function topbar() {
             placeholder="Search"
           ></input>
         </form>
-        <img src={userPfP} className="headerbar__navimg--phonescreen" />
+        <img
+          src={userPfP}
+          className="headerbar__navimg headerbar__userpfp--phonescreen"
+        />
       </div>
       <div className="headerbar__upload">
         <img
