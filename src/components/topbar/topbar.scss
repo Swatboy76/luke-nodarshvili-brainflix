@@ -1,0 +1,23 @@
+@use "../../partials/_breakpoints.scss" as *;
+
+.headerbar {
+  &__navimg {
+    display: flex;
+  }
+  &__userpfp {
+    @include phonescreen {
+      width: 2rem;
+    }
+  }
+  &__form {
+    background: white url(../../assets/icons/search.svg) left no-repeat;
+    padding-left: 17px;
+  }
+  &__upload {
+    display: flex;
+    justify-content: center;
+    background-color: #0095ff;
+    border-radius: 5px;
+    gap: 1rem;
+  }
+}
