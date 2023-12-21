@@ -1,3 +1,72 @@
+@use "../../styles/partials/_breakpoints.scss" as *;
+.headerbar {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 1rem 0.5rem 1rem;
+  @include tabletANDcomputerscreen {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    height: 2rem;
+    @include phonescreen {
+      margin-bottom: 1rem;
+    }
+  }
+  &__navimg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include phonescreen {
+      margin-bottom: 1rem;
+    }
+  }
+  &__userpfp {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    @include tabletANDcomputerscreen {
+      &--phonescreen {
+        display: none;
+      }
+    }
+    &--widescreen {
+      width: 3rem;
+      height: 3rem;
+    }
+    @include phonescreen {
+      &--widescreen {
+        display: none;
+      }
+    }
+  }
+  &__form-input {
+    background: white url(../../assets/icons/search.svg) left no-repeat;
+    background-position: 0.5rem;
+    padding-left: 30px;
+    height: 2rem;
+    border-radius: 5px;
+    border-color: #e1e1e1;
+    background-color: #fafafa;
+    border-style: solid;
+    width: 100%;
+  }
+  &__upload {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #0095ff;
+    border-radius: 5px;
+    gap: 1rem;
+    @include phonescreen {
+      margin-bottom: 1rem;
+    }
+  }
+  &__text {
+    color: white;
+    margin-left: auto;
+    margin-right: auto; //figure out why this dosent scale!!!!
+=======
 @use "../../partials/_breakpoints.scss" as *;
 
 .headerbar {

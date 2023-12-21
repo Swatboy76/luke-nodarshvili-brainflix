@@ -10,7 +10,11 @@ function topbar() {
       <div className="headerbar__navimg">
         <form>
           <input
+
+            className="headerbar__form-input"
+=======
             className="headerbar__navimg headerbar__form"
+
             type="text"
             id="searchBar"
             placeholder="Search"
@@ -18,6 +22,19 @@ function topbar() {
         </form>
         <img
           src={userPfP}
+
+          className="headerbar__userpfp headerbar__userpfp--phonescreen"
+        />
+      </div>
+      <div className="headerbar__upload">
+        <img className="headerbar__upload-image" src={uploadarrow} alt="Logo" />
+        <p className="headerbar__text">UPLOAD</p>
+      </div>
+      <img
+        src={userPfP}
+        className="headerbar__userpfp headerbar__userpfp--widescreen"
+      />
+=======
           className="headerbar__navimg headerbar__userpfp--phonescreen"
         />
       </div>
@@ -29,6 +46,7 @@ function topbar() {
         />
         <p>UPLOAD</p>
       </div>
+
     </header>
   );
 }
