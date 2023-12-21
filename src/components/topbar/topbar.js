@@ -1,4 +1,7 @@
 import "./topbar.scss";
+import logo from "../../assets/logo/BrainFlix-logo.svg";
+import userPfP from "../../assets/images/Mohan-muruge.jpg";
+import uploadarrow from "../../assets/icons/upload.svg";
 
 function topbar() {
   return (
@@ -7,7 +10,7 @@ function topbar() {
       <div className="headerbar__navimg">
         <form>
           <input
-            className="headerbar__navimg headerbar__form"
+            className="headerbar__form-input"
             type="text"
             id="searchBar"
             placeholder="Search"
@@ -15,17 +18,17 @@ function topbar() {
         </form>
         <img
           src={userPfP}
-          className="headerbar__navimg headerbar__userpfp--phonescreen"
+          className="headerbar__userpfp headerbar__userpfp--phonescreen"
         />
       </div>
       <div className="headerbar__upload">
-        <img
-          className="headerbar__upload headerbar__uploadimage"
-          src={uploadarrow}
-          alt="Logo"
-        />
-        <p>UPLOAD</p>
+        <img className="headerbar__upload-image" src={uploadarrow} alt="Logo" />
+        <p className="headerbar__text">UPLOAD</p>
       </div>
+      <img
+        src={userPfP}
+        className="headerbar__userpfp headerbar__userpfp--widescreen"
+      />
     </header>
   );
 }
