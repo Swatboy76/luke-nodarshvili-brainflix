@@ -14,6 +14,11 @@
       margin-bottom: 1rem;
     }
   }
+  &__left {
+    @include tabletANDcomputerscreen {
+      display: flex;
+    }
+  }
   &__navimg {
     display: flex;
     justify-content: space-between;
@@ -40,6 +45,10 @@
         display: none;
       }
     }
+  }
+  &__form {
+    width: 100%;
+    display: flex;
   }
   &__form-input {
     background: white url(../../assets/icons/search.svg) left no-repeat;
