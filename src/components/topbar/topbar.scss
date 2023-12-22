@@ -17,6 +17,8 @@
   &__left {
     @include tabletANDcomputerscreen {
       display: flex;
+      gap: 1rem;
+      align-items: center;
     }
   }
   &__navimg {
@@ -60,6 +62,7 @@
     background-color: #fafafa;
     border-style: solid;
     width: 100%;
+    margin-right: 0.5rem;
   }
   &__upload {
     display: flex;
@@ -67,8 +70,12 @@
     background-color: #0095ff;
     border-radius: 5px;
     gap: 1rem;
+    padding-left: 1rem;
     @include phonescreen {
       margin-bottom: 1rem;
+    }
+    @include tabletANDcomputerscreen {
+      width: 12rem;
     }
   }
   &__text {
