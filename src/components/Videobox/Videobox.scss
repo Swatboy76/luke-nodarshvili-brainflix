@@ -1,1 +1,17 @@
 @use "../../styles/partials/_breakpoints.scss" as *;
+
+.videobox {
+  display: flex;
+  background-color: black;
+}
+#videoplayer {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  @include tabletscreen {
+    width: 80%;
+  }
+  @include computerscreen {
+    width: 50rem;
+  }
+}
