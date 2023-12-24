@@ -1,1 +1,27 @@
 @use "../../../styles/partials/_breakpoints.scss" as *;
+
+.container {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.title {
+  border-bottom: 1px solid #e1e1e1;
+}
+.statistics {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e1e1e1;
+  &__coloum {
+    @include tabletANDcomputerscreen {
+      display: flex;
+      gap: 3rem;
+    }
+  }
+  &__element {
+    display: flex;
+    gap: 0.1rem;
+    &--bold {
+      font-weight: 700;
+    }
+  }
+}

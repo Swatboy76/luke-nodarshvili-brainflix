@@ -1,12 +1,10 @@
 import "./Videobox.scss";
-import React, { useState } from "react";
-import data from "../../data/video-details.json";
 
-function Videobox({ currentVideoID }) {
-  const matchingData = data.find((item) => item.id === currentVideoID); //finds specific JSON entry
-  const videoImage = matchingData?.image; //sifts though for image
+function Videobox({ currentVideoID, data }) {
+  const matchingData = data.find((item) => item.id === currentVideoID);
+  const videoImage = matchingData?.image;
   const videoSrc = matchingData?.video;
-  console.log(currentVideoID); //to remove later
+  console.log(currentVideoID);
   return (
     <main className="videobox">
       <video id="videoplayer" controls width="250" poster={videoImage}>
