@@ -15,7 +15,7 @@ function TitleBio({ currentVideoID, data }) {
     day: "2-digit",
     year: "numeric",
   });
-  const VideoBiography = matchingData?.description;
+  const Videodiscription = matchingData?.description;
   console.log(currentVideoID);
   return (
     <article className="container">
@@ -44,7 +44,7 @@ function TitleBio({ currentVideoID, data }) {
         </div>
       </section>
       <section>
-        <p>{VideoBiography}</p>
+        <p>{Videodiscription}</p>
       </section>
     </article>
   );
