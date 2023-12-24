@@ -6,6 +6,8 @@ function TitleBio({ currentVideoID, data }) {
   const matchingData = data.find((item) => item.id === currentVideoID);
   const videoTitle = matchingData?.title;
   const videoCreator = matchingData?.channel;
+  const videoViews = matchingData?.views;
+  const videoLikes = matchingData?.likes;
   let videoTimestamp = Number(matchingData?.timestamp);
   videoTimestamp = videoTimestamp.toLocaleString("en-US", {
     weekday: "short",
@@ -13,8 +15,7 @@ function TitleBio({ currentVideoID, data }) {
     day: "2-digit",
     year: "numeric",
   });
-  const videoViews = matchingData?.views;
-  const videoLikes = matchingData?.likes;
+  const VideoBiography = matchingData?.description;
   console.log(currentVideoID);
   return (
     <article className="container">
@@ -41,6 +42,9 @@ function TitleBio({ currentVideoID, data }) {
             <p>{videoLikes}</p>
           </div>
         </div>
+      </section>
+      <section>
+        <p>{VideoBiography}</p>
       </section>
     </article>
   );
