@@ -1,0 +1,8 @@
+@use "./styles/partials/_breakpoints.scss" as *;
+.acidegroup {
+  &__Acide {
+    @include phonescreen {
+      display: none;
+    }
+  }
+}
