@@ -1,0 +1,14 @@
+@use "../../styles/partials/_breakpoints.scss" as *;
+
+.individualVideo {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  &__list {
+    padding: 0;
+  }
+  &__thumbnail {
+    width: 120px;
+    height: 70px;
+  }
+}

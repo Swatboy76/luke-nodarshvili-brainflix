@@ -1,7 +1,17 @@
 @use "./styles/partials/_breakpoints.scss" as *;
-.acidegroup {
+.Acidegroup {
+  display: flex;
+
   &__Acide {
     @include phonescreen {
+      display: none;
+    }
+    @include tabletscreen {
+      display: none;
+    }
+  }
+  &__Underneath {
+    @include computerscreen {
       display: none;
     }
   }
