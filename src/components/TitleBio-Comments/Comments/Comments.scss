@@ -1,1 +1,39 @@
-@use "../../styles/partials/_breakpoints.scss" as *;
+@use "../../../styles/partials/_breakpoints.scss" as *;
+
+.CommentsArea {
+  list-style: none;
+  margin: 1rem;
+  &__list {
+    padding: 0;
+  }
+  padding: none;
+  @include tabletscreen {
+    margin: 0rem 2.5rem 0rem 2.5rem;
+  }
+  @include computerscreen {
+    margin: 0rem 0rem 0rem 8rem;
+  }
+}
+.IndividualComment {
+  margin-top: 1rem;
+  border-bottom: 1px solid #e1e1e1;
+  display: flex;
+  list-style: none;
+  &__Picture {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: #e1e1e1;
+  }
+  &__Contents {
+    width: 84%;
+    padding-left: 1rem;
+  }
+  &__NameDate {
+    display: flex;
+    justify-content: space-between;
+    &--Date {
+      color: #afafaf;
+    }
+  }
+}

@@ -4,6 +4,7 @@ import Topbar from "./components/topbar/topbar.js";
 import Videobox from "./components/Videobox/Videobox.js";
 import React, { useState } from "react";
 import data from "./data/video-details.json";
+import Comments from "./components/TitleBio-Comments/Comments/Comments.js";
 
 function App() {
   const [currentVideoID, setCurrentVideoID] = useState(
@@ -14,7 +15,10 @@ function App() {
     <div className="App">
       <Topbar />
       <Videobox currentVideoID={currentVideoID} data={data} />
-      <TitleBio currentVideoID={currentVideoID} data={data} />
+      <>
+        <TitleBio currentVideoID={currentVideoID} data={data} />
+        <Comments currentVideoID={currentVideoID} data={data} />
+      </>
     </div>
   );
 }
