@@ -3,6 +3,7 @@
   display: flex;
 
   &__Acide {
+    width: 100%;
     @include phonescreen {
       display: none;
     }
