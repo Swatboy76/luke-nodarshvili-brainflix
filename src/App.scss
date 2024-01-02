@@ -4,6 +4,8 @@
 
   &__Acide {
     width: 100%;
+    padding-left: 1rem;
+    border-left: 1px solid #e1e1e1;
     @include phonescreen {
       display: none;
     }

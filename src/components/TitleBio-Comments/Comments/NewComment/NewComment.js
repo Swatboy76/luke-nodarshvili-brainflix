@@ -25,6 +25,7 @@ function NewComment() {
             id="submit"
             className="form__right"
             placeholder="Comment"
+            value="Comment"
           />
         </form>
       </div>
