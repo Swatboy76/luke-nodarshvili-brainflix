@@ -1,7 +1,11 @@
 @use "../../styles/partials/_breakpoints.scss" as *;
 
 .videomenu {
-  margin: 1rem 1rem 0rem 1rem;
+  margin: 2rem 1rem 0rem 1rem;
+  &__title {
+    color: #afafaf;
+    font-weight: 700;
+  }
 }
 
 .individualVideo {

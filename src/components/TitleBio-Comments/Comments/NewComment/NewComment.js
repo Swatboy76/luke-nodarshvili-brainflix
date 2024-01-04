@@ -12,11 +12,12 @@ function NewComment() {
             <label className="form__left--label" for="commentbox">
               JOIN THE CONVERSATION
             </label>
-            <input
+            <textarea
               className="form__left--input"
               type="textbox"
               name="commentbox"
               id="commentbox"
+              placeholder="Join the conversation!"
             />
           </div>
           <input

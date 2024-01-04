@@ -4,7 +4,7 @@ const currentVideoID = "84e96018-4022-434e-80bf-000ce4cd12b8";
 function Videomenu() {
   return (
     <section className="videomenu">
-      <p>NEXT VIDEOS</p>
+      <p className="videomenu__title">NEXT VIDEOS</p>
       <ul className="individualVideo__list">
         {videoData.map((video) => {
           return (
