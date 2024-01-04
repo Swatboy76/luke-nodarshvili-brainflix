@@ -21,9 +21,9 @@ function App() {
           <TitleBio currentVideoID={currentVideoID} data={data} />
           <Comments currentVideoID={currentVideoID} data={data} />
         </div>
-        <div className="Acidegroup__Acide">
+        <acide className="Acidegroup__Acide">
           <Videomenu />
-        </div>
+        </acide>
       </div>
       <div className="Acidegroup__Underneath">
         <Videomenu />

@@ -1,9 +1,8 @@
 import "./Comments.scss";
 import NewComment from "./NewComment/NewComment.js";
-//<MakeComment />
 
 function Comments({ currentVideoID, data }) {
-  let matchingData = data.find((item) => item.id === currentVideoID);
+  let matchingData = data.find((item) => item.id === currentVideoID); //note to future self, when dealing w/ date dont devide by 1000 when using set local date
   let commentsData = matchingData?.comments;
   return (
     <section className="CommentsArea">

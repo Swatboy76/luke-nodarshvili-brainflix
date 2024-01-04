@@ -3,6 +3,9 @@
 .container {
   margin-left: 1rem;
   margin-right: 1rem;
+  @include computerscreen {
+    margin: 0rem 0rem 0rem 8rem;
+  }
 }
 .title {
   border-bottom: 1px solid #e1e1e1;
@@ -15,6 +18,9 @@
     @include tabletANDcomputerscreen {
       display: flex;
       gap: 3rem;
+    }
+    @include computerscreen {
+      margin-right: 1rem;
     }
   }
   &__element {

@@ -3,7 +3,7 @@ import videoData from "../../data/videos.json";
 const currentVideoID = "84e96018-4022-434e-80bf-000ce4cd12b8";
 function Videomenu() {
   return (
-    <section className="Videomenu">
+    <section className="videomenu">
       <p>NEXT VIDEOS</p>
       <ul className="individualVideo__list">
         {videoData.map((video) => {
