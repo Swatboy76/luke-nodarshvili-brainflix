@@ -4,9 +4,10 @@ import NewComment from "./NewComment/NewComment.js";
 function Comments({ currentVideoID, data }) {
   let matchingData = data.find((item) => item.id === currentVideoID); //note to future self, when dealing w/ date dont devide by 1000 when using set local date
   let commentsData = matchingData?.comments;
+  let commentsLen = commentsData.length;
   return (
     <section className="CommentsArea">
-      <NewComment />
+      <NewComment numbrOfComments={commentsLen} />
       <ul className="CommentsArea__list">
         {commentsData.map((comment) => {
           return (

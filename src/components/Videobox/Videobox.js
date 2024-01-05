@@ -12,6 +12,6 @@ function Videobox({ currentVideoID, data }) {
       </video>
     </main>
   );
-} //get this done for fucks sake
+}
 
 export default Videobox;

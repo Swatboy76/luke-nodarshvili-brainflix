@@ -1,7 +1,7 @@
 import "./Videomenu.scss";
 import videoData from "../../data/videos.json";
 const currentVideoID = "84e96018-4022-434e-80bf-000ce4cd12b8";
-function Videomenu() {
+function Videomenu(setCurrentVideoID) {
   return (
     <section className="videomenu">
       <p className="videomenu__title">NEXT VIDEOS</p>
