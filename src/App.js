@@ -1,6 +1,8 @@
 import "./App.scss";
 import React, { useState } from "react";
 import Mainpage from "./Parent-Components/Mainpage/Mainpage.js";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Topbar from "./components/Topbar/Topbar.js";
 
 function App() {
   const [currentVideoID, setCurrentVideoID] = useState(
@@ -8,9 +10,15 @@ function App() {
   );
 
   return (
-    <div className="App">
-      <Mainpage URL={URL} />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Topbar />
+        <Routes>
+          <Route path="" element={<Mainpage URL={URL} />} />
+          <Route path="/:videoId" element={<Mainpage URL={URL} />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

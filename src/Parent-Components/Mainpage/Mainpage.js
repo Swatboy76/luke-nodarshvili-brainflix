@@ -13,7 +13,6 @@ function Mainpage({ URL }) {
   );
   return (
     <>
-      <Topbar />
       <Videobox currentVideoID={currentVideoID} data={data} />
       <div className="Acidegroup">
         <div>
