@@ -8,10 +8,7 @@ import Comments from "../../components/TitleBio-Comments/Comments/Comments.js";
 import Videomenu from "../../components/Videomenu/Videomenu.js";
 import { useParams } from "react-router-dom";
 
-function Mainpage({ URL }) {
-  const [currentVideoID, setCurrentVideoID] = useState(
-    "84e96018-4022-434e-80bf-000ce4cd12b8"
-  );
+function Mainpage({ currentVideoID, setCurrentVideoID }) {
   return (
     <>
       <Videobox currentVideoID={currentVideoID} data={data} />
@@ -21,14 +18,11 @@ function Mainpage({ URL }) {
           <Comments currentVideoID={currentVideoID} data={data} />
         </div>
         <acide className="Acidegroup__Acide">
-          <Videomenu
-            currentVideoID={currentVideoID}
-            setId={setCurrentVideoID}
-          />
+          <Videomenu currentVideoID={currentVideoID} />
         </acide>
       </div>
       <div className="Acidegroup__Underneath">
-        <Videomenu currentVideoID={currentVideoID} setId={setCurrentVideoID} />
+        <Videomenu currentVideoID={currentVideoID} />
       </div>
     </>
   );

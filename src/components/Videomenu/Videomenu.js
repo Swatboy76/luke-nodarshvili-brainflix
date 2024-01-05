@@ -1,8 +1,7 @@
 import "./Videomenu.scss";
 import videoData from "../../data/videos.json";
 import { Link } from "react-router-dom";
-const currentVideoID = "84e96018-4022-434e-80bf-000ce4cd12b8";
-function Videomenu(setCurrentVideoID) {
+function Videomenu({ currentVideoID }) {
   return (
     <section className="videomenu">
       <p className="videomenu__title">NEXT VIDEOS</p>
@@ -10,7 +9,7 @@ function Videomenu(setCurrentVideoID) {
         {videoData.map((video) => {
           return (
             video.id !== currentVideoID && (
-              <Link reloadDocument key={video.id} to={`/${video.id}`}>
+              <Link key={video.id} to={`/${video.id}`}>
                 <li key={video.id} className="individualVideo">
                   <img
                     src={video.image}
