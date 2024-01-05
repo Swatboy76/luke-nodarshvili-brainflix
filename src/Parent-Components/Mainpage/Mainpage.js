@@ -1,6 +1,6 @@
 import "./Mainpage.scss";
 import TitleBio from "../../components/TitleBio-Comments/TitleBio/TitleBio.js";
-import Topbar from "../../components/topbar/topbar.js";
+import Topbar from "../../components/Topbar/Topbar.js";
 import Videobox from "../../components/Videobox/Videobox.js";
 import React, { useState } from "react";
 import data from "../../data/video-details.json";

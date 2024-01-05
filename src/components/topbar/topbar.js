@@ -1,4 +1,4 @@
-import "./topbar.scss";
+import "./Topbar.scss";
 import logo from "../../assets/logo/BrainFlix-logo.svg";
 import userPfP from "../../assets/images/Mohan-muruge.jpg";
 import uploadarrow from "../../assets/icons/upload.svg";
