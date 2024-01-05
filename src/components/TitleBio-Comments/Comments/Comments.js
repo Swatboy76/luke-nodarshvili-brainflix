@@ -2,7 +2,7 @@ import "./Comments.scss";
 import NewComment from "./NewComment/NewComment.js";
 
 function Comments({ currentVideoID, data }) {
-  let matchingData = data.find((item) => item.id === currentVideoID); //note to future self, when dealing w/ date dont devide by 1000 when using set local date
+  let matchingData = data.find((item) => item.id === currentVideoID);
   let commentsData = matchingData?.comments;
   let commentsLen = commentsData.length;
   return (
