@@ -14,8 +14,8 @@ function App() {
       <div className="App">
         <Topbar />
         <Routes>
-          <Route path="" element={<Mainpage URL={URL} />} />
-          <Route path="/:videoId" element={<Mainpage URL={URL} />} />
+          <Route path="" element={<Mainpage URL={currentVideoID} />} />
+          <Route path="/:currentVideoID" element={<Mainpage URL={URL} />} />
         </Routes>
       </div>
     </BrowserRouter>

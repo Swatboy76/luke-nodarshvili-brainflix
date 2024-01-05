@@ -10,14 +10,14 @@ function Videomenu(setCurrentVideoID) {
         {videoData.map((video) => {
           return (
             video.id !== currentVideoID && (
-              <Link key={video.id} to={`/${video.id}`}>
+              <Link reloadDocument key={video.id} to={`/${video.id}`}>
                 <li key={video.id} className="individualVideo">
                   <img
                     src={video.image}
                     alt="Thumbnail"
                     className="individualVideo__thumbnail"
                   />
-                  <div>
+                  <div className="individualVideo__text">
                     <p className="individualVideo__title">{video.title}</p>
                     <p>{video.channel}</p>
                   </div>

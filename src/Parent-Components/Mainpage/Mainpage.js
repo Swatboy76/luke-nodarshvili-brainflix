@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import data from "../../data/video-details.json";
 import Comments from "../../components/TitleBio-Comments/Comments/Comments.js";
 import Videomenu from "../../components/Videomenu/Videomenu.js";
+import { useParams } from "react-router-dom";
 
 function Mainpage({ URL }) {
   const [currentVideoID, setCurrentVideoID] = useState(
@@ -20,11 +21,14 @@ function Mainpage({ URL }) {
           <Comments currentVideoID={currentVideoID} data={data} />
         </div>
         <acide className="Acidegroup__Acide">
-          <Videomenu />
+          <Videomenu
+            currentVideoID={currentVideoID}
+            setId={setCurrentVideoID}
+          />
         </acide>
       </div>
       <div className="Acidegroup__Underneath">
-        <Videomenu setId={setCurrentVideoID} />
+        <Videomenu currentVideoID={currentVideoID} setId={setCurrentVideoID} />
       </div>
     </>
   );

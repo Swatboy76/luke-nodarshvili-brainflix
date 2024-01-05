@@ -21,6 +21,11 @@
     height: 70px;
     border-radius: 5px;
   }
+  &__text {
+    @include computerscreen {
+      width: 13.75rem;
+    }
+  }
   &__title {
     margin: 0;
     font-weight: 700;
