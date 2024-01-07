@@ -1,34 +1,41 @@
 import "./App.scss";
-import TitleBio from "./components/TitleBio-Comments/TitleBio/TitleBio.js";
-import Topbar from "./components/topbar/topbar.js";
-import Videobox from "./components/Videobox/Videobox.js";
 import React, { useState } from "react";
-import data from "./data/video-details.json";
-import Comments from "./components/TitleBio-Comments/Comments/Comments.js";
-import Videomenu from "./components/Videomenu/Videomenu.js";
+import Mainpage from "./Parent-Components/Mainpage/Mainpage.js";
+import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
+import Topbar from "./components/Topbar/Topbar.js";
 
 function App() {
-  const [currentVideoID, setCurrentVideoID] = useState(
-    "84e96018-4022-434e-80bf-000ce4cd12b8"
-  );
+  const defaultURL = "84e96018-4022-434e-80bf-000ce4cd12b8";
+  //"25ce5d91-a262-4dcf-bb87-42b87546bcfa" alternate
+
+  const [currentVideoID, setCurrentVideoID] = useState(defaultURL);
 
   return (
-    <div className="App">
-      <Topbar />
-      <Videobox currentVideoID={currentVideoID} data={data} />
-      <div className="Acidegroup">
-        <div>
-          <TitleBio currentVideoID={currentVideoID} data={data} />
-          <Comments currentVideoID={currentVideoID} data={data} />
-        </div>
-        <div className="Acidegroup__Acide">
-          <Videomenu />
-        </div>
+    <BrowserRouter>
+      <div className="App">
+        <Topbar />
+        <Routes>
+          <Route
+            path=""
+            element={
+              <Mainpage
+                currentVideoID={currentVideoID}
+                setCurrentVideoID={setCurrentVideoID}
+              />
+            }
+          />
+          <Route
+            path="/:currentVideoID"
+            element={
+              <Mainpage
+                currentVideoID={currentVideoID}
+                setCurrentVideoID={setCurrentVideoID}
+              />
+            }
+          />
+        </Routes>
       </div>
-      <div className="Acidegroup__Underneath">
-        <Videomenu />
-      </div>
-    </div>
+    </BrowserRouter>
   );
 }
 

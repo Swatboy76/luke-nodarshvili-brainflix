@@ -1,14 +1,34 @@
 @use "../../styles/partials/_breakpoints.scss" as *;
 
+.videomenu {
+  margin: 2rem 1rem 0rem 1rem;
+  &__title {
+    color: #afafaf;
+    font-weight: 700;
+  }
+}
+
 .individualVideo {
   list-style: none;
   display: flex;
   align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.25rem;
   &__list {
     padding: 0;
   }
   &__thumbnail {
     width: 120px;
     height: 70px;
+    border-radius: 5px;
+  }
+  &__text {
+    @include computerscreen {
+      width: 13.75rem;
+    }
+  }
+  &__title {
+    margin: 0;
+    font-weight: 700;
   }
 }

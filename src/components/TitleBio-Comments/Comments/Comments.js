@@ -1,13 +1,13 @@
 import "./Comments.scss";
 import NewComment from "./NewComment/NewComment.js";
-//<MakeComment />
 
 function Comments({ currentVideoID, data }) {
   let matchingData = data.find((item) => item.id === currentVideoID);
   let commentsData = matchingData?.comments;
+  let commentsLen = commentsData.length;
   return (
     <section className="CommentsArea">
-      <NewComment />
+      <NewComment numbrOfComments={commentsLen} />
       <ul className="CommentsArea__list">
         {commentsData.map((comment) => {
           return (

@@ -4,7 +4,6 @@ function Videobox({ currentVideoID, data }) {
   const matchingData = data.find((item) => item.id === currentVideoID);
   const videoImage = matchingData?.image;
   const videoSrc = matchingData?.video;
-  console.log(currentVideoID);
   return (
     <main className="videobox">
       <video id="videoplayer" controls width="250" poster={videoImage}>
@@ -12,6 +11,6 @@ function Videobox({ currentVideoID, data }) {
       </video>
     </main>
   );
-} //get this done for fucks sake
+}
 
 export default Videobox;

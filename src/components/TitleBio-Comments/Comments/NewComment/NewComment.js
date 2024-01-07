@@ -1,22 +1,27 @@
 import "./NewComment.scss";
 import pfp from "../../../../assets/images/Mohan-muruge.jpg";
-function NewComment() {
-  const numbrOfComments = "N/A";
+import React, { useState } from "react";
+
+function NewComment({ numbrOfComments }) {
+  const submitedForm = (event) => {
+    event.preventDefault();
+  };
   return (
     <section className="NewComment">
-      <p>{numbrOfComments} Comments</p>
+      <p className="NewComment__NumberOfComments">{numbrOfComments} Comments</p>
       <div className="imageform">
         <img className="imageform__image" src={pfp} alt="PFP" />
-        <form className="form">
+        <form className="form" onSubmit={submitedForm}>
           <div className="form__left">
             <label className="form__left--label" for="commentbox">
               JOIN THE CONVERSATION
             </label>
-            <input
+            <textarea
               className="form__left--input"
               type="textbox"
               name="commentbox"
               id="commentbox"
+              placeholder="Join the conversation!"
             />
           </div>
           <input
@@ -25,6 +30,7 @@ function NewComment() {
             id="submit"
             className="form__right"
             placeholder="Comment"
+            value="Comment"
           />
         </form>
       </div>
