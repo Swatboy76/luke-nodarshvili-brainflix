@@ -1,7 +1,6 @@
 import "./Videomenu.scss";
 import videoData from "../../data/videos.json";
 import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
 function Videomenu({ currentVideoID, setCurrentVideoID }) {
   const changeVideo = (videoId) => {
     setCurrentVideoID(videoId);
