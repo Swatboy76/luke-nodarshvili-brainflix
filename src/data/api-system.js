@@ -1,3 +1,5 @@
+import axios from "axios";
+
 class mainAPI {
   constructor() {
     this.apiKey = "268db567-3d81-46b3-bbc4-56d1c1fd483d";
@@ -8,17 +10,19 @@ class mainAPI {
       `${this.baseUrl}/vidoes?api_key=${this.apiKey}`
     );
     console.log(`${this.baseUrl}/vidoes?api_key=${this.apiKey}`);
-    let userComments = response.data;
-    return userComments;
+    let videoList = response.data;
+    return videoList;
   }
-  async getVideoData() {
+  /*async getVideoData(currentVideoID) {
     const response = await axios.get(
-      `${this.baseUrl}/showdates?api_key=${this.apiKey}`
+      `${this.baseUrl}/vidoes/${currentVideoID}?api_key=${this.apiKey}`
     );
-    console.log(`${this.baseUrl}/comments?api_key=${this.apiKey}`);
-    let showsList = response.data;
-    return showsList;
-  }
+    console.log(
+      `${this.baseUrl}/vidoes/${currentVideoID}?api_key=${this.apiKey}`
+    );
+    let currentVideoID = response.data;
+    return currentVideo;
+  }*/
 }
 
 export default mainAPI;
