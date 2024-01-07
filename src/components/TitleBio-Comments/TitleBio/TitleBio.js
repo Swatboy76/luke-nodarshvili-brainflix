@@ -16,7 +16,6 @@ function TitleBio({ currentVideoID, data }) {
     year: "numeric",
   });
   const Videodiscription = matchingData?.description;
-  console.log(currentVideoID);
   return (
     <article className="container">
       <section className="title">

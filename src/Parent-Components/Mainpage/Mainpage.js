@@ -18,11 +18,17 @@ function Mainpage({ currentVideoID, setCurrentVideoID }) {
           <Comments currentVideoID={currentVideoID} data={data} />
         </div>
         <acide className="Acidegroup__Acide">
-          <Videomenu currentVideoID={currentVideoID} />
+          <Videomenu
+            currentVideoID={currentVideoID}
+            setCurrentVideoID={setCurrentVideoID}
+          />
         </acide>
       </div>
       <div className="Acidegroup__Underneath">
-        <Videomenu currentVideoID={currentVideoID} />
+        <Videomenu
+          currentVideoID={currentVideoID}
+          setCurrentVideoID={setCurrentVideoID}
+        />
       </div>
     </>
   );

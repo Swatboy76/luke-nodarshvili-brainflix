@@ -1,7 +1,12 @@
 import "./Videomenu.scss";
 import videoData from "../../data/videos.json";
 import { Link } from "react-router-dom";
-function Videomenu({ currentVideoID }) {
+import { useParams } from "react-router-dom";
+function Videomenu({ currentVideoID, setCurrentVideoID }) {
+  function ChangeVideo() {
+    const { videoId } = useParams();
+    setCurrentVideoID(videoId);
+  }
   return (
     <section className="videomenu">
       <p className="videomenu__title">NEXT VIDEOS</p>
@@ -9,7 +14,7 @@ function Videomenu({ currentVideoID }) {
         {videoData.map((video) => {
           return (
             video.id !== currentVideoID && (
-              <Link key={video.id} to={`/${video.id}`}>
+              <Link key={video.id} to={`/${video.id}`} onClick={ChangeVideo}>
                 <li key={video.id} className="individualVideo">
                   <img
                     src={video.image}

@@ -6,16 +6,9 @@ import Topbar from "./components/Topbar/Topbar.js";
 
 function App() {
   const defaultURL = "84e96018-4022-434e-80bf-000ce4cd12b8";
+  //"25ce5d91-a262-4dcf-bb87-42b87546bcfa" alternate
 
-  const [currentVideoID, setCurrentVideoID] = useState(
-    "84e96018-4022-434e-80bf-000ce4cd12b8"
-  );
-
-  let { updatedVideoID } = useParams();
-  if (currentVideoID == true) {
-    setCurrentVideoID(updatedVideoID);
-    console.log(updatedVideoID);
-  }
+  const [currentVideoID, setCurrentVideoID] = useState(defaultURL);
 
   return (
     <BrowserRouter>
