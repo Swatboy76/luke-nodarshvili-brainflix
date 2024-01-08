@@ -21,9 +21,9 @@ class brainFlixAPI {
   }
   async getVideobyId(id) {
     const response = await axios.get(
-      `${this.url}/video/${id}?api_key=${this.key}`
+      `${this.url}/videos/${id}?api_key=${this.key}`
     );
-    console.log(`${this.url}/video/${id}?api_key=${this.key}`);
+    console.log(`${this.url}/videos/${id}?api_key=${this.key}`);
     let videoData = response.data;
     return videoData;
   }

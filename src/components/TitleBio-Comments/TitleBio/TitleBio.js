@@ -1,21 +1,41 @@
 import "./TitleBio.scss";
 import viewsImage from "../../../assets/icons/views.svg";
 import likesImage from "../../../assets/icons/likes.svg";
+import { useEffect, useState } from "react";
+import brainFlixAPI from "../../../data/api-system";
 
-function TitleBio({ currentVideoID, data }) {
-  const matchingData = data.find((item) => item.id === currentVideoID);
-  const videoTitle = matchingData?.title;
-  const videoCreator = matchingData?.channel;
-  const videoViews = matchingData?.views;
-  const videoLikes = matchingData?.likes;
-  let videoTimestamp = Number(matchingData?.timestamp);
+function TitleBio({ currentVideoID }) {
+  let [titleBioData, setTitleBioData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        let api = new brainFlixAPI(currentVideoID);
+        const response = await api.getVideobyId(currentVideoID);
+        setTitleBioData(response);
+        console.log(response);
+        return response;
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, [currentVideoID]);
+  if (!titleBioData) {
+    return <p>Loading..</p>;
+  }
+  const videoTitle = titleBioData.title;
+  const videoCreator = titleBioData.channel;
+  const videoViews = titleBioData.views;
+  const videoLikes = titleBioData.likes;
+  let videoTimestamp = Number(titleBioData.timestamp);
   videoTimestamp = videoTimestamp.toLocaleString("en-US", {
     weekday: "short",
     month: "short",
     day: "2-digit",
     year: "numeric",
   });
-  const Videodiscription = matchingData?.description;
+  const Videodiscription = titleBioData.description;
   return (
     <article className="container">
       <section className="title">

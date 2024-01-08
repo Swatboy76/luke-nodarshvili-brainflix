@@ -1,15 +1,35 @@
 import "./Comments.scss";
 import NewComment from "./NewComment/NewComment.js";
+import { useEffect, useState } from "react";
+import brainFlixAPI from "../../../data/api-system";
 
-function Comments({ currentVideoID, data }) {
-  let matchingData = data.find((item) => item.id === currentVideoID);
-  let commentsData = matchingData?.comments;
+function Comments({ currentVideoID }) {
+  let [commentsData, setcommentsData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        let api = new brainFlixAPI(currentVideoID);
+        const response = await api.getVideobyId(currentVideoID);
+        setcommentsData(response);
+        console.log(response);
+        return response;
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, [currentVideoID]);
+  if (!commentsData) {
+    return <p>Loading..</p>;
+  }
+
   let commentsLen = commentsData.length;
   return (
     <section className="CommentsArea">
       <NewComment numbrOfComments={commentsLen} />
       <ul className="CommentsArea__list">
-        {commentsData.map((comment) => {
+        {commentsData.comments.map((comment) => {
           return (
             <li key={comment.id} className="IndividualComment">
               <img className="IndividualComment__Picture" />
