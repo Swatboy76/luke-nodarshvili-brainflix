@@ -1,28 +1,22 @@
 import axios from "axios";
 
-class mainAPI {
-  constructor() {
-    this.apiKey = "268db567-3d81-46b3-bbc4-56d1c1fd483d";
-    this.baseUrl = "https://project-2-api.herokuapp.com";
-  }
-  async getVidoeslist() {
-    const response = await axios.get(
-      `${this.baseUrl}/vidoes?api_key=${this.apiKey}`
-    );
-    console.log(`${this.baseUrl}/vidoes?api_key=${this.apiKey}`);
-    let videoList = response.data;
-    return videoList;
-  }
-  /*async getVideoData(currentVideoID) {
-    const response = await axios.get(
-      `${this.baseUrl}/vidoes/${currentVideoID}?api_key=${this.apiKey}`
-    );
-    console.log(
-      `${this.baseUrl}/vidoes/${currentVideoID}?api_key=${this.apiKey}`
-    );
-    let currentVideoID = response.data;
-    return currentVideo;
-  }*/
+const aPIlinkAllVidoes =
+  "https://project-2-api.herokuapp.com/videos/?api_key=268db567-3d81-46b3-bbc4-56d1c1fd483d";
+async function output() {
+  const response = await axios.get(aPIlinkAllVidoes);
+  return response.data;
 }
+export default output;
 
-export default mainAPI;
+class brainFlixAPI {
+  constructor() {
+    this.key = "268db567-3d81-46b3-bbc4-56d1c1fd483d";
+    this.url = "https://project-2-api.herokuapp.com";
+  }
+  async getVideoList() {
+    const response = await axios.get(`${this.url}/videos/?api_key=${this.key}`);
+    console.log(`${this.url}/videos/?api_key=${this.key}`);
+    let userComments = response.data;
+    return userComments;
+  }
+}

@@ -1,11 +1,31 @@
 import "./Videomenu.scss";
 import videoData from "../../data/videos.json";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import output from "../../data/api-system";
 
 function Videomenu({ currentVideoID, setCurrentVideoID }) {
   const changeVideo = (videoId) => {
     setCurrentVideoID(videoId);
   };
+  // Chat GPT start
+  const YourComponent = () => {
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await output();
+          console.log(response);
+          // Update state or perform other actions with the response
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        }
+      };
+
+      fetchData();
+    }, []);
+  };
+  YourComponent(); // Chat GPT end
+
   return (
     <section className="videomenu">
       <p className="videomenu__title">NEXT VIDEOS</p>
