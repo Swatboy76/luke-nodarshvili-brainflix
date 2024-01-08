@@ -2,11 +2,14 @@ import "./Topbar.scss";
 import logo from "../../assets/logo/BrainFlix-logo.svg";
 import userPfP from "../../assets/images/Mohan-muruge.jpg";
 import uploadarrow from "../../assets/icons/upload.svg";
+import { Link } from "react-router-dom";
 
 function topbar() {
   return (
     <header className="headerbar">
-      <img className="headerbar__logo" src={logo} alt="Logo" />
+      <Link to="">
+        <img className="headerbar__logo" src={logo} alt="Logo" />
+      </Link>
       <div className="headerbar__left">
         <div className="headerbar__navimg">
           <form className="headerbar__form">
@@ -22,14 +25,16 @@ function topbar() {
             className="headerbar__userpfp headerbar__userpfp--phonescreen"
           />
         </div>
-        <div className="headerbar__upload">
-          <img
-            className="headerbar__upload-image"
-            src={uploadarrow}
-            alt="Logo"
-          />
-          <p className="headerbar__text">UPLOAD</p>
-        </div>
+        <Link to="/Upload">
+          <div className="headerbar__upload">
+            <img
+              className="headerbar__upload-image"
+              src={uploadarrow}
+              alt="Logo"
+            />
+            <p className="headerbar__text">UPLOAD</p>
+          </div>
+        </Link>
         <img
           src={userPfP}
           className="headerbar__userpfp headerbar__userpfp--widescreen"
@@ -40,3 +45,5 @@ function topbar() {
 }
 
 export default topbar;
+//<Link to=`/Upload` >
+//</Link>;
