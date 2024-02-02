@@ -4,7 +4,7 @@ import userPfP from "../../assets/images/Mohan-muruge.jpg";
 import uploadarrow from "../../assets/icons/upload.svg";
 import { Link } from "react-router-dom";
 
-function topbar() {
+function Topbar() {
   return (
     <header className="headerbar">
       <Link to="">
@@ -44,6 +44,6 @@ function topbar() {
   );
 }
 
-export default topbar;
+export default Topbar;
 //<Link to=`/Upload` >
 //</Link>;
