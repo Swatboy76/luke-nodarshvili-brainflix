@@ -1,0 +1,79 @@
+.NewComment {
+  padding: 0 0rem 1rem 0;
+  border-bottom: 1px solid #e1e1e1;
+}
+@media screen and (min-width: 1280px) {
+  .NewComment {
+    padding: 0 1rem 1rem 0;
+  }
+}
+.NewComment__NumberOfComments {
+  font-weight: 700;
+}
+
+.imageform {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.imageform__image {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.form {
+  gap: 1rem;
+  padding-left: 1rem;
+  width: 100%;
+}
+.form__left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.form__left--label {
+  color: #afafaf;
+  font-weight: 700;
+}
+.form__left--input {
+  color: black;
+  border-radius: 5px;
+  border-color: #e1e1e1;
+  background-color: #fafafa;
+  border-style: solid;
+  padding: 1rem 0 0 1rem;
+  text-align: left;
+  vertical-align: top;
+}
+@media screen and (max-width: 767px) {
+  .form__left--input {
+    height: 120px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .form__left--input {
+    height: 42px;
+  }
+}
+.form__right {
+  margin-top: 0.5rem;
+  width: 100%;
+  background-color: #0095ff;
+  border-radius: 5px;
+  border-style: none;
+  color: white;
+  height: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .form__right {
+    margin-top: 20px;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .form {
+    display: flex;
+  }
+}/*# sourceMappingURL=NewComment.css.map */

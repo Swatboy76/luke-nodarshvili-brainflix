@@ -1,0 +1,42 @@
+.CommentsArea {
+  list-style: none;
+  margin: 1rem;
+  padding: none;
+}
+.CommentsArea__list {
+  padding: 0;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .CommentsArea {
+    margin: 0rem 2.5rem 0rem 2.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .CommentsArea {
+    margin: 0rem 0rem 0rem 8rem;
+  }
+}
+
+.IndividualComment {
+  margin-top: 1rem;
+  border-bottom: 1px solid #e1e1e1;
+  display: flex;
+  list-style: none;
+}
+.IndividualComment__Picture {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #e1e1e1;
+}
+.IndividualComment__Contents {
+  width: 84%;
+  padding-left: 1rem;
+}
+.IndividualComment__NameDate {
+  display: flex;
+  justify-content: space-between;
+}
+.IndividualComment__NameDate--Date {
+  color: #afafaf;
+}/*# sourceMappingURL=Comments.css.map */

@@ -1,0 +1,32 @@
+.videomenu {
+  margin: 2rem 1rem 0rem 1rem;
+}
+.videomenu__title {
+  color: #afafaf;
+  font-weight: 700;
+}
+
+.individualVideo {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.25rem;
+}
+.individualVideo__list {
+  padding: 0;
+}
+.individualVideo__thumbnail {
+  width: 120px;
+  height: 70px;
+  border-radius: 5px;
+}
+@media screen and (min-width: 1280px) {
+  .individualVideo__text {
+    width: 13.75rem;
+  }
+}
+.individualVideo__title {
+  margin: 0;
+  font-weight: 700;
+}/*# sourceMappingURL=Videomenu.css.map */

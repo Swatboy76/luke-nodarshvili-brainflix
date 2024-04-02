@@ -1,0 +1,20 @@
+.videobox {
+  display: flex;
+  background-color: black;
+}
+
+#videoplayer {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  #videoplayer {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #videoplayer {
+    width: 50rem;
+  }
+}/*# sourceMappingURL=Videobox.css.map */

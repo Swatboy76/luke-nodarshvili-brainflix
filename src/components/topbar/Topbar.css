@@ -1,0 +1,127 @@
+@font-face {
+  font-family: avenir-Next-Reg;
+  src: url("../../assets/font/AvenirNextLTPro-Regular.otf");
+}
+@font-face {
+  font-family: avenir-Next-Bold;
+  src: url("../../assets/font/AvenirNextLTPro-Bold.otf");
+}
+@font-face {
+  font-family: avenir-Next-Demi;
+  src: url("../../assets/font/AvenirNextLTPro-Demi.otf");
+}
+p {
+  font-family: avenir-Next-Reg;
+}
+
+h1 {
+  font-family: avenir-Next-Reg;
+}
+
+h2 {
+  font-family: avenir-Next-Reg;
+}
+
+h3 {
+  font-family: avenir-Next-Reg;
+}
+
+label {
+  font-family: avenir-Next-Reg;
+}
+
+.headerbar {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 1rem 0.5rem 1rem;
+}
+@media screen and (min-width: 768px) {
+  .headerbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.headerbar__logo {
+  height: 2rem;
+}
+@media screen and (max-width: 767px) {
+  .headerbar__logo {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .headerbar__left {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+}
+.headerbar__navimg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .headerbar__navimg {
+    margin-bottom: 1rem;
+  }
+}
+.headerbar__userpfp {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+@media screen and (min-width: 768px) {
+  .headerbar__userpfp--phonescreen {
+    display: none;
+  }
+}
+.headerbar__userpfp--widescreen {
+  width: 3rem;
+  height: 3rem;
+}
+@media screen and (max-width: 767px) {
+  .headerbar__userpfp--widescreen {
+    display: none;
+  }
+}
+.headerbar__form {
+  width: 100%;
+  display: flex;
+}
+.headerbar__form-input {
+  background: white url(../../assets/icons/search.svg) left no-repeat;
+  background-position: 0.5rem;
+  padding-left: 30px;
+  height: 2rem;
+  border-radius: 5px;
+  border-color: #e1e1e1;
+  background-color: #fafafa;
+  border-style: solid;
+  width: 100%;
+  margin-right: 0.5rem;
+}
+.headerbar__upload {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #0095ff;
+  border-radius: 5px;
+  gap: 1rem;
+  padding-left: 1rem;
+}
+@media screen and (max-width: 767px) {
+  .headerbar__upload {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .headerbar__upload {
+    width: 12rem;
+  }
+}
+.headerbar__text {
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}/*# sourceMappingURL=Topbar.css.map */
